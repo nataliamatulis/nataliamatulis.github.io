@@ -151,19 +151,36 @@ html{
 .sobremi .contenedor-intereses{
     display: flex;
     justify-content: center;
-    text-align: center;
+    flex-wrap: wrap;
 }
 .sobremi .contenedor-intereses img{
     height: auto;
-    margin-right: 10px;
-    justify-items: center;
+    max-width: 100px; /* Limitar el tamaño máximo */
+    margin: 10px; /* Espaciado entre íconos */
 }
 .sobremi .contenedor-intereses p{
     color:  rgb(248, 159, 137);
     font-weight: 500;
-    font-size: 28px;
-    margin-inline: 50px;
-    margin-top: 21px;
+    font-size: 1.5rem; /* Ajuste para ser responsive */
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .contenedor-header header {
+        flex-direction: column; /* Cambiar a columna en móviles */
+    }
+    
+    .nav-responsive {
+        display: block; /* Mostrar el menú responsive */
+    }
+    
+    .sobremi .contenido-seccion {
+        padding: 20px; /* Menos espacio en pantallas pequeñas */
+    }
+    
+    .inicio .contenido-banner {
+        max-width: 95%; /* Ajustar en móviles */
+    }
 }
 
 .curriculum h2{

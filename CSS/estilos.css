@@ -8,6 +8,9 @@
 html{
     scroll-behavior: smooth;
 }
+
+/* ENCABEZADO */
+
 .contenedor-header{
     background-color: rgb(252, 190, 175);
     position: fixed;
@@ -24,7 +27,7 @@ html{
 }
 .contenedor-header header .logo a{
     font-family: 'Parisienne';
-    font-size: 55px;
+    font-size: 2.5rem;
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
@@ -32,9 +35,16 @@ html{
     display: flex;
     list-style: none;
 }
+.contenedor-header header nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-header header nav ul li {
+    display: block; /* Para el menú en mobile */
+}
 .contenedor-header header nav ul li a{
-    text-align: none;
-    font-size: 20px;
+    font-size: 1.5rem;
     color: rgb(253, 253, 253);
     margin: 0 5px;
     padding: 15px;
@@ -46,13 +56,36 @@ html{
 }
 .nav-responsive{
     background-color: rgb(255, 255, 255);
-    font-size: 20px;
+    font-size: 1.25rem;
     color:rgb(255, 255, 255);
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
     display: none;
 }
+@media (max-width: 768px) {
+    .contenedor-header header {
+        flex-direction: column; /* Colocar en columna */
+    }
+
+    .contenedor-header header nav ul {
+        display: none; /* Ocultar menú por defecto */
+        flex-direction: column; /* Colocar en columna */
+        width: 100%;
+        background-color: rgb(252, 190, 175);
+    }
+
+    .contenedor-header header nav ul.show {
+        display: flex; /* Mostrar menú cuando se active */
+    }
+
+    .nav-responsive {
+        display: block; /* Mostrar el botón del menú */
+    }
+}
+
+/* INICIO */
+
 .inicio{
     background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgb(255, 255, 255));
     background-image: url(F8.jpg);
@@ -103,6 +136,8 @@ html{
     background-color: white;
     border-radius:10px; 
 }
+
+/* SECCIONES */
 
 .sobremi{
     background-color: white;
@@ -182,6 +217,8 @@ html{
         max-width: 95%; /* Ajustar en móviles */
     }
 }
+
+/* CURRICULUM */ 
 
 .curriculum h2{
     background-color: white;

@@ -1,0 +1,42 @@
+/* SOBRE MI */
+.sobremi {
+    padding: 80px 20px; /* Más espacio */
+    background-color: #fefefe;
+    color: #6b4d4b;
+    text-align: center;
+}
+
+.sobremi h2 {
+    font-size: 2.5rem; /* Más grande */
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.sobremi h3, .sobremi h4 {
+    font-size: 2rem; /* Más grande */
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.sobremi p {
+    font-size: 1.3rem; /* Más grande */
+    color: #fcbeaf;
+}
+
+.sobremi .contenedor-intereses {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px; /* Más espacio entre íconos */
+}
+
+.sobremi .contenedor-intereses img {
+    width: 120px; /* Imágenes más grandes */
+    height: auto;
+}
+
+.sobremi .contenedor-intereses p {
+    font-size: 1.2rem; /* Texto más grande */
+    color: #6b4d4b;
+    margin-top: 15px;
+}

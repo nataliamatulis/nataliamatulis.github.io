@@ -1,237 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dancing+Script:wght@400..700&family=Parisienne&family=Questrial&display=swap');
-*{
-   box-sizing: border-box;
-    font-family: 'DM Sans';
-    margin: 0;
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Parisienne&display=swap');
+
+* {
+    font-family: 'DM Sans', sans-serif;
 }
-html{
+
+html {
+    font-size: 50px; /* Escala global (por defecto es 16px, aquí la agrandamos) */
     scroll-behavior: smooth;
 }
 
 /* ENCABEZADO */
-
-.contenedor-header{
-    background-color: rgb(252, 190, 175);
-    position: fixed;
-    width: 100%;
-    z-index: 99;
-}
-.contenedor-header header{
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px; 
-}
-.contenedor-header header .logo a{
-    font-family: 'Parisienne';
-    font-size: 2.5rem;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-.contenedor-header header ul{
-    display: flex;
-    list-style: none;
-}
-.contenedor-header header nav ul {
-    display: flex;
-    align-items: center;
+.navbar-brand {
+    font-family: 'Parisienne', cursive;
+    font-size: 2.5rem; /* Aumentado */
+    color:#9b807f !important;
 }
 
-.contenedor-header header nav ul li {
-    display: block; /* Para el menú en mobile */
-}
-.contenedor-header header nav ul li a{
-    font-size: 1.5rem;
-    color: rgb(253, 253, 253);
-    margin: 0 5px;
-    padding: 15px;
-    transition: .5s;
-    text-decoration: none;
-}
-.contenedor-header header nav ul li a:hover{
-    color: rgb(255, 255, 255);
-}
-.nav-responsive{
-    background-color: rgb(255, 255, 255);
-    font-size: 1.25rem;
-    color:rgb(255, 255, 255);
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: none;
-}
-@media (max-width: 768px) {
-    .contenedor-header header {
-        flex-direction: column; /* Colocar en columna */
-    }
-
-    .contenedor-header header nav ul {
-        display: none; /* Ocultar menú por defecto */
-        flex-direction: column; /* Colocar en columna */
-        width: 100%;
-        background-color: rgb(252, 190, 175);
-    }
-
-    .contenedor-header header nav ul.show {
-        display: flex; /* Mostrar menú cuando se active */
-    }
-
-    .nav-responsive {
-        display: block; /* Mostrar el botón del menú */
-    }
+.nav-link {
+    font-size: 1.5rem; /* Aumentado */
+    color: #9b807f !important;
+    transition: color 0.3s;
 }
 
+.nav-link:hover {
+    color:#6b4d4b !important;
+}
+
+.container-fluid{
+    background-color:#9b807f39;
+}
 /* INICIO */
-
-.inicio{
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgb(255, 255, 255));
-    background-image: url(F8.jpg);
-    background-size: cover;
+.inicio {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.8), #ffffff), url('F8.jpg') no-repeat center center/cover;
     height: 100vh;
-    color:rgb(255, 255, 255);
     display: flex;
     align-items: center;
-}
-.inicio .contenido-banner{
-    padding: 20px;
-    background-color: rgb(252, 190, 175);
-    max-width: 350px;
-    margin: auto;
+    justify-content: center;
     text-align: center;
-    border-radius: 40px;
-}
-.inicio .contenido-banner img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
-    border: 10px solid rgba(255, 255, 255, 0.411);
-    border-radius: 100%;
-}
-.inicio .contenido-banner h1{
-    margin-top: 8px;
-    font-size: 48px;
-    font-family: 'Parisienne';
-    font-weight: 500;
-}
-.inicio .contenido-banner h2{
-    font-size: 20px;
-    font-weight: 500;
-
-}
-.inicio .contenido-banner .redes a{
-    color: rgba(104, 80, 75, 0.733);
-    display: inline-block;
-    text-decoration: none;
-    border-radius: 0px;
-    width: 45px;
-    height: 40px;
-    font-size: 32px;
-    transition: .3s;
-}
-.inicio .contenido-banner .redes a:hover{
-    background-color: white;
-    border-radius:10px; 
+    color: #6b4d4b;
 }
 
-/* SECCIONES */
-
-.sobremi{
-    background-color: white;
-    color: rgba(143, 106, 97, 0.788);
-    padding: 50px 20px;
-    text-align: center;
-}
-.sobremi .contenido-seccion{
-    margin: auto;
-    text-align: center;
-}
-.sobremi h2{ 
-    font-size: 40px;
-    font-family: 'Questrial';
-    text-align: center;
-    padding: 20px 0;
-    margin-top: -20px;
-    margin-bottom: 50px;
-}
-.sobremi .contenido-seccion p{
-    color:  rgb(248, 159, 137);
-    font-weight: lighter;
-    margin-bottom: 10px;
+.inicio img {
+    width: 500px; /* Más grande */
+    height: auto;
+    border: 8px solid rgba(255, 255, 255, 0.7);
+    border-radius: 5%;
 }
 
-.sobremi h3{
-    margin-top: 30px;
-    font-size: 30px;
-    font-family: 'Questrial';
+
+.inicio h1 {
+    font-family: 'Parisienne', cursive;
+    font-size: 3rem; /* Más grande */
+    margin: 30px 0 15px;
+}
+
+.inicio .lead {
+    font-size: 1.5rem; /* Más grande */
     margin-bottom: 30px;
 }
-.sobremi .contenido-seccion p{
-    font: 28px;
-    line-height: 22px;
-    margin-bottom: x;
-}
-.sobremi h4{
-    margin-top: 45px;
-    font-size: 30px;
-    font-family: 'Questrial';
-    margin-bottom: 50px;
-    text-align: center;
-    margin-top: 60px;
+
+.inicio .fa-brands {
+    font-size: 2rem; /* Íconos más grandes */
+    transition: transform 0.3s ease, color 0.3s;
 }
 
-.sobremi .contenedor-intereses{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.sobremi .contenedor-intereses img{
-    height: auto;
-    max-width: 100px; /* Limitar el tamaño máximo */
-    margin: 10px; /* Espaciado entre íconos */
-}
-.sobremi .contenedor-intereses p{
-    color:  rgb(248, 159, 137);
-    font-weight: 500;
-    font-size: 1.5rem; /* Ajuste para ser responsive */
-    margin: 10px;
+.inicio .fa-brands:hover {
+    transform: scale(1.3); /* Efecto hover aumentado */
+    color: #fcbeaf;
 }
 
-@media (max-width: 768px) {
-    .contenedor-header header {
-        flex-direction: column; /* Cambiar a columna en móviles */
-    }
-    
-    .nav-responsive {
-        display: block; /* Mostrar el menú responsive */
-    }
-    
-    .sobremi .contenido-seccion {
-        padding: 20px; /* Menos espacio en pantallas pequeñas */
-    }
-    
-    .inicio .contenido-banner {
-        max-width: 95%; /* Ajustar en móviles */
-    }
-}
 
-/* CURRICULUM */ 
 
-.curriculum h2{
-    background-color: white;
-    font-size: 30px;
-    color: rgba(143, 106, 97, 0.788);
-    text-align: center;
-    margin-top: 60px;
-}
 
-.curriculum h3{
-    color:  rgba(143, 106, 97, 0.788);
-    font-weight:bolder;
-    margin-bottom: 10px;
-}
 
 
